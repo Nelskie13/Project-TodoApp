@@ -5,14 +5,16 @@ const BASE_URL = "http://localhost:3000";
 
 export const todoAPI = {
   fetchAll: () => fetch(`${BASE_URL}/todos`).then((res) => res.json()),
-  updateOne: ({ id, todo }) => {
+  updateOne: (id, todo) => {
     // TODO: return a fetch call to an appropriate API route to update todo
     // URL: /todos/{id} -- the id here is the id value of the todo item to be updated
     // HINT: to update an existing record you need to use PATCH method
     const options = {
-      method: "",
-      headers: "",
-      body: "",
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(todo),
     };
     return fetch(`${BASE_URL}/todos/${id}`, options).then((res) => res.json());
   },
@@ -21,9 +23,11 @@ export const todoAPI = {
     // URL: /todos
     // HINT: to create a new todo item is to use POST method
     const options = {
-      method: "",
-      headers: "",
-      body: "",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(todo),
     };
     return fetch(`${BASE_URL}/todos`, options).then((res) => res.json());
   },
@@ -32,8 +36,10 @@ export const todoAPI = {
     // URL: /todos/{id} -- the id here is the id value of the todo item to be deleted
     // HINT: to delete a todo item use DELETE method
     const options = {
-      method: "",
-      headers: "",
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
     };
     return fetch(`${BASE_URL}/todos/${id}`, options).then((res) => res.json());
   },
