@@ -1,12 +1,6 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "learn HTML",
-      "text": "I want to know HTML",
-      "state": "done"
-    },
-    {
       "id": 2,
       "title": "learn CSS",
       "text": "I want to be a god of CSS",
@@ -29,6 +23,24 @@
       "title": "Become a Web Developer",
       "text": "I really want to become a Web Developer in the end",
       "state": "new"
+    },
+    {
+      "title": "Voltes V",
+      "text": "Let's Volt in",
+      "state": "new",
+      "id": 6
+    },
+    {
+      "title": "SuperMan",
+      "text": "Save the earth",
+      "state": "new",
+      "id": 7
+    },
+    {
+      "title": "dsads",
+      "text": "dasdasdas",
+      "state": "new",
+      "id": 8
     }
   ]
 }

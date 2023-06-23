@@ -8,7 +8,7 @@ function App() {
         <h1>ToDo List Application</h1>
         <NewTodoForm className="plus" />
       </div>
-      <hr style={{marginBottom: '30px'}}/>
+      <hr style={{ marginBottom: "30px" }} />
       <TodoList />
     </div>
   );

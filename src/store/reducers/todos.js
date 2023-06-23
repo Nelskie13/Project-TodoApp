@@ -13,15 +13,16 @@ export const deleteTodo = createAsyncThunk("todo/delete", (id) => {
 });
 export const updateTodo = createAsyncThunk("todo/update", (payload) => {
   // TODO: return a call  to corresponding API method i.e. todoAPI.fetchAll()
+  console.log("updateTodo called with payload:", payload);
   const response = todoAPI.updateOne(payload.id, payload.todo);
   const todo = response.data;
-  return todo;
+  return { id: payload.id, todo: todo };
 });
 export const addTodo = createAsyncThunk("todo/add", (todo) => {
   // TODO: return a call  to corresponding API method i.e. todoAPI.fetchAll()
   const response = todoAPI.createOne(todo);
-  const todo = response.data;
-  return todo;
+  const todos = response.data;
+  return todos;
 });
 
 const initialState = [];
@@ -47,9 +48,12 @@ const todosSlice = createSlice({
     });
 
     builder.addCase(updateTodo.fulfilled, (state, action) => {
+      console.log("state before update:", state);
+      console.log("action.payload after update:", action.payload);
       // TODO: Finish the code for updating todo
       const index = state.findIndex((todo) => todo.id === action.meta.arg);
       if (index !== -1) state.splice(index, 1, action.payload);
+      console.log("state after update:", state);
     });
   },
 });
