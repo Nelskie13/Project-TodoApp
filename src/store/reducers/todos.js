@@ -13,10 +13,14 @@ export const deleteTodo = createAsyncThunk("todo/delete", (id) => {
 });
 export const updateTodo = createAsyncThunk("todo/update", (payload) => {
   // TODO: return a call  to corresponding API method i.e. todoAPI.fetchAll()
-  console.log("updateTodo called with payload:", payload);
-  const response = todoAPI.updateOne(payload.id, payload.todo);
+  const response = todoAPI.updateOne(payload.id, {
+    id: payload.id,
+    state: payload.state,
+    text: payload.text,
+    title: payload.title,
+  });
   const todo = response.data;
-  return { id: payload.id, todo: todo };
+  return todo;
 });
 export const addTodo = createAsyncThunk("todo/add", (todo) => {
   // TODO: return a call  to corresponding API method i.e. todoAPI.fetchAll()
@@ -44,16 +48,13 @@ const todosSlice = createSlice({
     builder.addCase(addTodo.fulfilled, (state, action) => {
       // TODO: Finish the code for adding todo
       const index = state.findIndex((todo) => todo.id === action.meta.arg);
-      if (index !== -1) state.splice(index, 1, action.payload);
+      state[index] = action.payload;
     });
 
     builder.addCase(updateTodo.fulfilled, (state, action) => {
-      console.log("state before update:", state);
-      console.log("action.payload after update:", action.payload);
       // TODO: Finish the code for updating todo
       const index = state.findIndex((todo) => todo.id === action.meta.arg);
-      if (index !== -1) state.splice(index, 1, action.payload);
-      console.log("state after update:", state);
+      state[index] = action.payload;
     });
   },
 });

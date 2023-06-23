@@ -4,7 +4,7 @@
       "id": 2,
       "title": "learn CSS",
       "text": "I want to be a god of CSS",
-      "state": "done"
+      "state": "in progress"
     },
     {
       "id": 3,
@@ -16,31 +16,19 @@
       "id": 4,
       "title": "learn React",
       "text": "I would like to be really good in React",
-      "state": "new"
-    },
-    {
-      "id": 5,
-      "title": "Become a Web Developer",
-      "text": "I really want to become a Web Developer in the end",
-      "state": "new"
-    },
-    {
-      "title": "Voltes V",
-      "text": "Let's Volt in",
-      "state": "new",
-      "id": 6
+      "state": "in progress"
     },
     {
       "title": "SuperMan",
-      "text": "Save the earth",
-      "state": "new",
-      "id": 7
+      "text": "Save the world",
+      "state": "done",
+      "id": 5
     },
     {
-      "title": "dsads",
-      "text": "dasdasdas",
-      "state": "new",
-      "id": 8
+      "title": "Norem Ako Dito",
+      "text": "Marami.",
+      "state": "done",
+      "id": 6
     }
   ]
 }
