@@ -67,10 +67,34 @@
       "id": 13
     },
     {
-      "title": "Lumamon ng bato",
-      "text": "Manuntok ng bata",
+      "title": "Learn HTML",
+      "text": "I want to know HTML",
+      "state": "done",
+      "id": 15
+    },
+    {
+      "title": "learn CSS",
+      "text": "I want to be a god of CSS",
+      "state": "done",
+      "id": 16
+    },
+    {
+      "title": "learn JavaScript",
+      "text": "I want to master my JS knowledge",
+      "state": "done",
+      "id": 17
+    },
+    {
+      "title": "learn React",
+      "text": "I would like to be really good in React",
+      "state": "done",
+      "id": 18
+    },
+    {
+      "title": "Become a Web Developer",
+      "text": "I really want to become a Web Developer in the end",
       "state": "in progress",
-      "id": 14
+      "id": 19
     }
   ]
 }
