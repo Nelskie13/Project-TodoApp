@@ -1,28 +1,76 @@
 {
   "todos": [
     {
-      "id": 2,
-      "title": "learn CSS",
-      "text": "I want to be a god of CSS",
-      "state": "in progress"
+      "title": "Maligo",
+      "text": "Mag igib ng pitong timba ng tubig sa bundok",
+      "state": "in progress",
+      "id": 1
     },
     {
-      "id": 3,
-      "title": "learn JavaScript",
-      "text": "I want to master my JS knowledge",
-      "state": "in progress"
+      "title": "Mag Saing",
+      "text": "Mag saing ng kain. Limang takal ng bigas at tubig para hindi malata.",
+      "state": "in progress",
+      "id": 2
     },
     {
-      "id": 4,
-      "title": "learn React",
-      "text": "I would like to be really good in React",
-      "state": "in progress"
+      "title": "Mag Hugas ng Pinggan",
+      "text": "Maghugas pagkatapos kumain.",
+      "state": "in progress",
+      "id": 3
     },
     {
-      "title": "SuperMan",
-      "text": "Save the world",
-      "state": "done",
+      "title": "Mag Luto ng Pancit Canton",
+      "text": "Magluto ng 3pcs Pancit Canton.",
+      "state": "in progress",
+      "id": 4
+    },
+    {
+      "title": "Kausapin ng Pusa",
+      "text": "Kausapin ang pusa dahil malungkot siya.",
+      "state": "in progress",
       "id": 5
+    },
+    {
+      "title": "Maglinis ng Electric Fan",
+      "text": "Mag Linis ng Electric Fan bago Kausapin ang pusa para cool.",
+      "state": "in progress",
+      "id": 6
+    },
+    {
+      "title": "Sawayin ang mga Batang Lato-lato",
+      "text": "Buhusan ng tubig pag may batang lato-lato sa labas ng bahay",
+      "state": "in progress",
+      "id": 7
+    },
+    {
+      "title": "Mag Bantay ng Printing Shop",
+      "text": "Magbantay ng Printing Shop at maraming kumakatok.",
+      "state": "in progress",
+      "id": 8
+    },
+    {
+      "title": "Pray",
+      "text": "Pray before you code.",
+      "state": "in progress",
+      "id": 10
+    },
+    {
+      "title": "Dilig",
+      "text": "Mag dilig ng halaman sa labas ng bahay.",
+      "state": "in progress",
+      "id": 11
+    },
+    {
+      "title": "Mamalengke",
+      "text": "Bumili ng ka mga sumusunod;\n-1 kl Bangus\n-1/2 Patatas\n- 1/2 Kamatis\n- 10 pcs Itlog",
+      "state": "new",
+      "id": 12
+    },
+    {
+      "title": "Mag laba",
+      "text": "Maglaba ng damit",
+      "state": "new",
+      "id": 13
     }
   ]
 }

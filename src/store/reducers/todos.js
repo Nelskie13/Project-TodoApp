@@ -7,26 +7,20 @@ export const fetchTodos = createAsyncThunk("todos/fetchAll", () =>
 );
 export const deleteTodo = createAsyncThunk("todo/delete", (id) => {
   // TODO: return a call  to corresponding API method i.e. todoAPI.fetchAll()
-  const response = todoAPI.deleteOne(id);
-  const todo = response.data;
-  return todo;
+  return todoAPI.deleteOne(id);
 });
 export const updateTodo = createAsyncThunk("todo/update", (payload) => {
   // TODO: return a call  to corresponding API method i.e. todoAPI.fetchAll()
-  const response = todoAPI.updateOne(payload.id, {
+  return todoAPI.updateOne(payload.id, {
     id: payload.id,
     state: payload.state,
     text: payload.text,
     title: payload.title,
   });
-  const todo = response.data;
-  return todo;
 });
 export const addTodo = createAsyncThunk("todo/add", (todo) => {
   // TODO: return a call  to corresponding API method i.e. todoAPI.fetchAll()
-  const response = todoAPI.createOne(todo);
-  const todos = response.data;
-  return todos;
+  return todoAPI.createOne(todo);
 });
 
 const initialState = [];
@@ -37,24 +31,29 @@ const todosSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchTodos.fulfilled, (state, action) => {
-      Object.assign(state, action.payload);
+      const newTodos = action.payload.filter(
+        (newTodo) => !state.find((todo) => todo.id === newTodo.id)
+      );
+      return [...state, ...newTodos];
     });
-
     builder.addCase(deleteTodo.fulfilled, (state, action) => {
       const index = state.findIndex((todo) => todo.id === action.meta.arg);
-      if (index !== -1) state.splice(index, 1);
+      if (index !== -1) {
+        return [...state.slice(0, index), ...state.slice(index + 1)];
+      }
+      return state;
     });
 
     builder.addCase(addTodo.fulfilled, (state, action) => {
-      // TODO: Finish the code for adding todo
-      const index = state.findIndex((todo) => todo.id === action.meta.arg);
-      state[index] = action.payload;
+      const newTodo = action.payload;
+      return [...state, newTodo];
     });
 
     builder.addCase(updateTodo.fulfilled, (state, action) => {
-      // TODO: Finish the code for updating todo
-      const index = state.findIndex((todo) => todo.id === action.meta.arg);
-      state[index] = action.payload;
+      const updatedTodo = action.payload;
+      return state.map((todo) =>
+        todo.id === updatedTodo.id ? updatedTodo : todo
+      );
     });
   },
 });
