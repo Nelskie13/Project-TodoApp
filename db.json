@@ -37,12 +37,6 @@
       "id": 6
     },
     {
-      "title": "Sawayin ang mga Batang Lato-lato",
-      "text": "Buhusan ng tubig pag may batang lato-lato sa labas ng bahay",
-      "state": "in progress",
-      "id": 7
-    },
-    {
       "title": "Mag Bantay ng Printing Shop",
       "text": "Magbantay ng Printing Shop at maraming kumakatok.",
       "state": "in progress",
@@ -63,14 +57,20 @@
     {
       "title": "Mamalengke",
       "text": "Bumili ng ka mga sumusunod;\n-1 kl Bangus\n-1/2 Patatas\n- 1/2 Kamatis\n- 10 pcs Itlog",
-      "state": "new",
+      "state": "in progress",
       "id": 12
     },
     {
-      "title": "Mag laba",
-      "text": "Maglaba ng damit",
+      "title": "Thinking Design",
+      "text": "Thinking how to implement trending design in my Todo App Project",
       "state": "new",
       "id": 13
+    },
+    {
+      "title": "Lumamon ng bato",
+      "text": "Manuntok ng bata",
+      "state": "in progress",
+      "id": 14
     }
   ]
 }

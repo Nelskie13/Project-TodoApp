@@ -42,7 +42,7 @@ export default function TodoItem({ todo }) {
   });
 
   return (
-    <div className={containerClassName}>
+    <div className={`todo-item-container ${containerClassName}`}>
       <div className="todo-item-header-container">
         <h2 className="todo-item-header">{title}</h2>
         <FaRegWindowClose

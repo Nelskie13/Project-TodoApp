@@ -47,7 +47,7 @@ export function NewTodoForm({ className }) {
       </Button>
       <Modal open={open} onClose={handleClose}>
         <Box sx={style}>
-          <h2>Add New ToDo</h2>
+          <h2 className="modal-title">Add New ToDo</h2>
           <form onSubmit={handleSubmit}>
             <FormGroup>
               <TextField label="Title" name="title" required margin="dense" />

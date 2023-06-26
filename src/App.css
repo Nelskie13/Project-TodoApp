@@ -1,20 +1,35 @@
 .App {
   max-width: 1000px;
   margin: auto;
-}
-
-h1 {
-  text-align: center;
+  padding: 20px;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  border-radius: 10px;
 }
 
 .header {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .plus {
   position: absolute;
   right: 0;
+}
+.title {
+  color: white;
 }

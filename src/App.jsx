@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <h1>ToDo List Application</h1>
+        <h1 className="title">ToDo List Application</h1>
         <NewTodoForm className="plus" />
       </div>
       <hr style={{ marginBottom: "30px" }} />

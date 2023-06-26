@@ -1,33 +1,19 @@
-:root {
-  --inactive-color: rgba(100, 100, 100, 0.4);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-.todo-item-container {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
+:root {
+  --inactive-color: rgba(100, 100, 100, 0.4);
 }
 
 .todo-item-container:hover {
   box-shadow: 1px 0px 4px 4px rgba(18, 25, 43, 0.2);
 }
 
-.todo-item-header-container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .todo-item-cross {
   color: var(--inactive-color);
-}
-
-.todo-item-header {
-  margin: 0;
-}
-
-.todo-status-container {
-  display: flex;
-  gap: 10px;
 }
 
 .todo-status {
@@ -49,10 +35,6 @@
   cursor: pointer;
 }
 
-.todo-item-cross:hover {
-  color: #ef2c00;
-}
-
 .todo-mark-in-progress:hover,
 .in-progress {
   color: rgb(240, 162, 4);
@@ -61,4 +43,155 @@
 .todo-mark-done:hover,
 .done {
   color: rgb(98, 245, 6);
+}
+.todo-item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-item-header {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.todo-item-cross:hover {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+.todo-item-text {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.todo-status-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.in-progress-icon {
+  cursor: pointer;
+  color: #673ab7;
+}
+
+.in-progress-icon:hover {
+  color: #512da8;
+  text-decoration: underline;
+}
+
+.done-icon {
+  cursor: pointer;
+  color: #4caf50;
+}
+
+.done-icon:hover {
+  color: #388e3c;
+  text-decoration: underline;
+}
+
+.todo-item-container:nth-child(odd) {
+  background-color: #fce4ec;
+}
+
+.todo-item-container:nth-child(even) {
+  background-color: #f0f4c3;
+}
+
+.todo-item-container:nth-child(3n) {
+  background-color: #b2ebf2;
+}
+
+.todo-item-container:nth-child(4n) {
+  background-color: #ffcdd2;
+}
+
+.todo-item-container:nth-child(5n) {
+  background-color: #dcedc8;
+}
+
+.todo-item-container:nth-child(6n) {
+  background-color: #b3e5fc;
+}
+
+.todo-item-container:nth-child(7n) {
+  background-color: #f0b27a;
+}
+
+.todo-item-container:nth-child(8n) {
+  background-color: #aed581;
+}
+
+.todo-item-container:nth-child(9n) {
+  background-color: #fff59d;
+}
+
+.todo-item-container:nth-child(10n) {
+  background-color: #c5cae9;
+}
+
+.todo-item-container:nth-child(11n) {
+  background-color: #ffe0b2;
+}
+
+.todo-item-container:nth-child(12n) {
+  background-color: #81d4fa;
+}
+
+.todo-item-container:nth-child(13n) {
+  background-color: #ce93d8;
+}
+
+.todo-item-container:nth-child(14n) {
+  background-color: #b2dfdb;
+}
+
+.todo-item-container:nth-child(15n) {
+  background-color: #f8bbd0;
+}
+
+.todo-item-container:nth-child(16n) {
+  background-color: #c8e6c9;
+}
+
+.todo-item-container:nth-child(17n) {
+  background-color: #ffcc80;
+}
+
+.todo-item-container:nth-child(18n) {
+  background-color: #f5f5f5;
+}
+
+.todo-item-container:nth-child(19n) {
+  background-color: #f9a825;
+}
+
+.todo-item-container:nth-child(20n) {
+  background-color: #ffebee;
+}
+
+.todo-status:nth-child(odd) {
+  background-color: #f06292;
 }
